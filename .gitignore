@@ -36,4 +36,4 @@ dist-ssr
 # !.yarn/cache
 
 # and uncomment the following lines
-.pnp.*
+# .pnp.*
