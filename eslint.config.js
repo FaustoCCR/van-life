@@ -7,7 +7,6 @@ import eslintPluginPrettier from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
 
 export default [
-  // { ignores: ['dist'] },
   {
     files: ['**/*.{js,jsx}'],
     ignores: [
@@ -33,7 +32,7 @@ export default [
       prettier: eslintPluginPrettier,
     },
     settings: {
-      'import/external-module-folders': ['.yarn'], // <-- critical for Yarn PnP
+      'import/external-module-folders': ['node_modules'], // <-- it can be omitted since this is set by default
       react: {
         version: 'detect',
       },
@@ -47,8 +46,8 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      ...prettierConfig.rules,
       'prettier/prettier': 'error',
     },
   },
-  prettierConfig,
 ]
