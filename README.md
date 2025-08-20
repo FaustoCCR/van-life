@@ -152,7 +152,7 @@ The project relies on eslint and prettier for linting and formatting.
 
    ```json
    {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+     "editor.defaultFormatter": "esbenp.prettier-vscode"
      "editor.formatOnSave": true,
      "editor.codeActionsOnSave": {
        "source.fixAll.eslint": true
