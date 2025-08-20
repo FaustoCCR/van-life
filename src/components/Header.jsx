@@ -7,18 +7,38 @@ const Header = () => {
           <Link className='navbar-brand fw-bold text-uppercase' to='/'>
             #VanLife
           </Link>
-          <div className='d-flex gap-2 fw-semibold'>
-            <NavLink
-              to='/host'
-              className={({ isActive }) =>
-                `link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover ${isActive ? 'link-dark fw-bold' : ''}`
-              }
-            >
-              Host
-            </NavLink>
-            <NavLink to='/about'>About</NavLink>
-            <NavLink to='/vans'>Vans</NavLink>
-          </div>
+          <ul className='navbar-nav flex-row nav-underline fw-semibold'>
+            <li className='nav-item'>
+              <NavLink
+                to='/host'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Host
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                to='/about'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                About
+              </NavLink>
+            </li>
+            <li className='nav-item'>
+              <NavLink
+                to='/vans'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Vans
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -26,30 +46,3 @@ const Header = () => {
 }
 
 export default Header
-{
-  /* <header>
-      <Link className='site-logo' to='/'>
-        #VanLife
-      </Link>
-      <nav>
-        <NavLink
-          to='/host'
-          className={({ isActive }) => (isActive ? 'active-link' : null)}
-        >
-          Host
-        </NavLink>
-        <NavLink
-          to='/about'
-          className={({ isActive }) => (isActive ? 'active-link' : null)}
-        >
-          About
-        </NavLink>
-        <NavLink
-          to='/vans'
-          className={({ isActive }) => (isActive ? 'active-link' : null)}
-        >
-          Vans
-        </NavLink>
-        </nav> 
-      </header> */
-}
