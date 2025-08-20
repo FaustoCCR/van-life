@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+// override bootstrap variables before loading it
+$font-family-sans-serif: 'Parkinsans', sans-serif;
+$body-bg: #fff7ed;
+/*
+$body-color: #2b2b2b;
+$primary: #ff8c42;
+$secondary: #4a4a4a;
+$light: #f8f9fa;
+$dark: #1a1a1a;
+
+$border-radius: 0.5rem;
+$theme-colors: (
+  'info': tomato,
+  'danger': teal,
+); */
+// import all of bootstrap's css
+@import 'bootstrap/scss/bootstrap';
