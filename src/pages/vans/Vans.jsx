@@ -10,24 +10,24 @@ const Vans = () => {
   }, [])
 
   const vanElements = vans.map(van => (
-    <div className='van-tile' key={van.id}>
-      <Link to={`/vans/${van.id}`}>
-        <img src={van.imageUrl} alt={van.name} />
-        <div className='van-info'>
+    <div className='col-12 col-sm-6 col-md-4 col-lg-3' key={van.id}>
+      <Link to={`/vans/${van.id}`} className='text-decoration-none text-black'>
+        <img src={van.imageUrl} alt={van.name} className='img-fluid rounded' />
+        <div className='mt-1'>
           <h3>{van.name}</h3>
           <p>
             ${van.price} <span>/day</span>
           </p>
         </div>
-        <i className={`van-type ${van.type} selected`}>{van.type}</i>
+        <i className={`badge van-type ${van.type} selected`}>{van.type}</i>
       </Link>
     </div>
   ))
 
   return (
-    <div className='van-list-container'>
-      <h1>Explore our van options</h1>
-      <div className='van-list'>{vanElements}</div>
+    <div className='px-4 py-5'>
+      <h1 className='fw-bold'>Explore our van options</h1>
+      <div className='van-list row g-4 mt-5'>{vanElements}</div>
     </div>
   )
 }
