@@ -13,7 +13,7 @@
 }
 
 .link-button {
-  display: inline-block;
+  display: inline-block !important;
   text-align: center;
   text-decoration: none;
   border: none;
@@ -26,5 +26,56 @@
 
   &:hover {
     transform: translate(1px, 1px);
+  }
+}
+
+.van-type {
+  padding: 0.4rem 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffead0;
+  text-transform: capitalize !important;
+  color: #4d4d4d;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #ffead0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.selected {
+    color: #ffead0;
+  }
+
+  &.simple {
+    &:hover,
+    &.selected {
+      background-color: #e17654;
+    }
+  }
+
+  &.rugged {
+    &:hover,
+    &.selected {
+      background-color: #115e59;
+    }
+  }
+
+  &.luxury {
+    &:hover,
+    &.selected {
+      background-color: #161616;
+    }
+  }
+  &.clear-filters {
+    margin-left: -20px;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #4d4d4d;
   }
 }
