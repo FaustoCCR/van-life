@@ -9,7 +9,10 @@ const Home = () => {
         Add adventure to your life by joining the #vanlife movement. Rent the
         perfect van to make your perfect road trip
       </p>
-      <Link to='vans' className='link-button bg-primary w-100 mt-4'>
+      <Link
+        to='vans'
+        className='link-button bg-primary mt-4 align-self-md-center'
+      >
         Find your van
       </Link>
     </div>
