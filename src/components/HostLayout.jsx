@@ -7,10 +7,10 @@ const HostLayout = () => {
       <Navbar
         className='mb-4'
         items={[
-          { to: '/host', children: 'Dashboard', end: true },
-          { to: '/host/income', children: 'Income' },
-          { to: '/host/vans', children: 'Vans' },
-          { to: '/host/reviews', children: 'Reviews' },
+          { to: '.', children: 'Dashboard', end: true }, // . indicates the current route
+          { to: 'income', children: 'Income' },
+          { to: 'vans', children: 'Vans' },
+          { to: 'reviews', children: 'Reviews' },
         ]}
       />
       <Outlet />
