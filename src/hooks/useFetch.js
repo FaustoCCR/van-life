@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from 'react'
  * Custom hook to fetch data from an API endpoint.
  * @param {string} url
  * @param {RequestInit} options
- * @returns { {data: any, loading: boolean, error: Error | null} }
+ * @returns { {data: any, loading: boolean, error: Error | null, refetch: function} }
  */
 export default function useFetch(url, options = {}) {
   const [data, setData] = useState(null)
