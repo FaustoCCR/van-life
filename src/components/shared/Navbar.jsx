@@ -45,7 +45,9 @@ import { Link, NavLink } from 'react-router'
 const Navbar = ({ brand, items = [], className, style, ...rest }) => {
   return (
     <nav className={`navbar ${className}`} style={style} {...rest}>
-      <div className='container-fluid'>
+      <div
+        className={`${!brand ? 'justify-content-start' : 'container-fluid'}`}
+      >
         {brand && (
           <Link className='navbar-brand fw-bold text-uppercase' to={brand.to}>
             {brand.children}
