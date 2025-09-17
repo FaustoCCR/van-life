@@ -5,7 +5,7 @@ const HostLayout = () => {
   return (
     <>
       <Navbar
-        className='mb-4'
+        className='mb-4 px-4'
         items={[
           { to: '.', children: 'Dashboard', end: true }, // . indicates the current route
           { to: 'income', children: 'Income' },
